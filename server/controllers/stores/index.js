@@ -1,12 +1,12 @@
-import { getStoreService, putStoreService, postStoreService , deleteStoreService } from "../../service/user";
+import { getStoreService, putStoreService, postStoreService , deleteStoreService } from "../../service/store";  //also write index.js in services/store to export all services
 
 const postStore = async (req, res) => {
 
     try {
         const userId = req.user;
-        const name = req.body;
+        const name = req.body.name;
         
-        const stores = await postStoreService.create({data: {
+        const stores = await postStoreService.create({
             name,
             userId,
           }}
