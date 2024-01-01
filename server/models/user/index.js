@@ -23,6 +23,12 @@ export default function user (Sequelize, DataTypes) {
     paranoid: true,
     tableName: "tb_user"
   });
+  User.associate = (models) => {
+    User.hasMany(models.store, {
+      foreignKey: 'userId',
+      as: 'stores',
+    })
+  };
 
   return User;
 };
