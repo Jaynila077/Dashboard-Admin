@@ -1,7 +1,7 @@
 import db from "../../../models/index.js";
 
-const remove = async (id) => {
-    const stores = await db.store.destroy({ where: { id } });
+const remove = async (id , userId) => {
+    const stores = await db.store.destroy(userId,{ where: { id } });
     return stores;
 }
 
