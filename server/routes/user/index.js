@@ -5,9 +5,9 @@ import authenticateToken from "../../middleware/auth.js";
 
 const User = express.Router();
 
-User.get("/", authenticateToken,userController.getAllUser);
+User.get("/",userController.getAllUser);
 User.get("/:id",authenticateToken, userController.getUserById);
-User.post("/", authenticateToken,userController.postUser);
+User.post("/",userController.postUser);
 User.put("/:id", authenticateToken,userController.putUser);
 User.delete("/:id", authenticateToken,userController.removeUser);
 
