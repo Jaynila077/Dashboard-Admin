@@ -1,7 +1,7 @@
 export default function store(Sequelize, DataTypes) {
     const Store = Sequelize.define("store", {
       id: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
         allowNull: false,
