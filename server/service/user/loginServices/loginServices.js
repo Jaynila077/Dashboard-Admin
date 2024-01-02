@@ -19,6 +19,9 @@ const authenticateUser = async (name, password) => {
 
   const generateToken = (userId) => {
     const secretKey =  process.env.ACCESS_TOKEN_SECRET; 
+    if (!secretKey) {
+      throw new Error('JWT secret key is missing');
+    }  
     return jwt.sign({ userId }, secretKey);
   };
   
