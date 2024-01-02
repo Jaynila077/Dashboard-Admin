@@ -19,10 +19,8 @@ export default function user (Sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-  },{
-    paranoid: true,
-    tableName: "tb_user"
-  });
+  }
+  );
   User.associate = (models) => {
     User.hasMany(models.store, {
       foreignKey: 'userId',
