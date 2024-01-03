@@ -1,2 +1,2 @@
 # Dashboard-Admin
-This is a Simple Dashboard build in next js where user can make his own e-commerce service
+This is a Simple Dashboard build with nextjs and nodejs where user can make his own e-commerce service.
