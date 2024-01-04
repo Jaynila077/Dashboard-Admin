@@ -65,7 +65,7 @@ const removeBillboard = async (req, res) => {
     }
 }
 
-export {
+export default {
     getBillboard,
     getBillboardById,
     postBillboard,
