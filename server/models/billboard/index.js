@@ -1,13 +1,13 @@
 export default function billboard(Sequelize, DataTypes) {
     const Billboard = Sequelize.define("billboard", {
       id: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
         allowNull: false,
       },
       storeId: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         allowNull: false,
       },
       label: {

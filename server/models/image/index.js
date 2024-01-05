@@ -1,13 +1,13 @@
 export default function image(Sequelize, DataTypes) {
     const Image = Sequelize.define("image", {
       id: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
         allowNull: false,
       },
       productId: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         allowNull: false,
       },
       url: {

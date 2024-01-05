@@ -1,13 +1,13 @@
 export default function color(Sequelize, DataTypes) {
     const Color = Sequelize.define("color", {
       id: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
         allowNull: false,
       },
       storeId: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         allowNull: false,
       },
       name: {

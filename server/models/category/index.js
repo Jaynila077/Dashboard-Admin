@@ -1,17 +1,13 @@
 export default function category(Sequelize, DataTypes) {
     const Category = Sequelize.define("category", {
       id: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
         allowNull: false,
       },
       storeId: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      billboardId: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         allowNull: false,
       },
       name: {
@@ -23,9 +19,6 @@ export default function category(Sequelize, DataTypes) {
         {
           fields: ['storeId'],
         },
-        {
-          fields: ['billboardId'],
-        },
       ],
     });
   
@@ -33,10 +26,6 @@ export default function category(Sequelize, DataTypes) {
       Category.belongsTo(models.store, {
         foreignKey: 'storeId',
         as: 'store',
-      });
-      Category.belongsTo(models.billboard, {
-        foreignKey: 'billboardId',
-        as: 'billboard',
       });
       Category.hasMany(models.product, {
         foreignKey: 'categoryId',

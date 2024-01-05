@@ -11,7 +11,7 @@ export default function store(Sequelize, DataTypes) {
         allowNull: false,
       },
       userId: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         allowNull: false,
       },
     });

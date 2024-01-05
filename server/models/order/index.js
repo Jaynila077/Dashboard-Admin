@@ -1,13 +1,13 @@
 export default function order(Sequelize, DataTypes) {
     const Order = Sequelize.define("order", {
       id: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
         allowNull: false,
       },
       storeId: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         allowNull: false,
       },
       isPaid: {
